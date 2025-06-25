@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+.cabeçalho__menu-hamburguer {
+    width: 24px;
+    height: 24px;
+    background-image: url("../assets/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;     
+}
+
+.conteiner__botao:checked ~.conteiner__rotulo>.cabeçalho__menu-hamburguer {
+    background-image: url("../assets/menu-branco.svg");
+}
+
+.conteiner__botao:checked~.conteiner__rotulo{
+    background: var(--azul-degrade);
+}
+
+.conteiner__rotulo {
+    padding: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.conteiner__titulo {
+    display: none;
+}
+
+.menu_tablet {
+    display: none;
+}
+
+.texto__menu-lateral {
+    display: none;
+}
+
+.link__menu {
+    display: flex;
+    position: relative;
+    right: 2rem;
+    padding: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .conteiner__titulo--negrito, .conteiner__titulo {
+        font-family: var(--fonte-secundaria);
+        font-size: 30px;
+    }
+
+    .conteiner__titulo {
+        font-weight: 400;
+        display: inline-block;
+    }
+
+    .conteiner__titulo--negrito {
+        font-weight: 700;
+    }
+
+    .menu_tablet {
+        display: flex;
+        
+        
+    }
+
+    .lista__menu-tablet {
+        text-align: center;
+        padding: 0 1rem;
+        font-family: var(--fonte-principal);
+        font-weight: 400;
+        font-size: 1rem;
+        
+    }
+
+    .lista__menu-tablet-link {
+        text-decoration: none;
+        color: black;
+        font-family: var(--fonte-principal);
+        font-size: 1rem;
+        font-weight: 400;   
+    }
+
+    #imagem__coracao {
+        display: none;
+    }
+    
+    .cabeçalho__menu-hamburguer {
+        display: none;
+    }
+
+    .opcões-botão:checked~.lista-menu {
+        display: block;
+        width: auto;
+    }
+
+    .opcões-botão {
+        display: none;
+    }
+
+    .opcões-botão:checked~.opções__rotulo>.lista__menu-tablet {
+        background: var(--azul-degrade);
+        color: var(--cor-branco);   
+    }
+
+    .lista__menu-tablet {
+        padding: 2rem 1rem;
+    }
+
+    .link__menu {
+        display: flex;
+        position: relative;
+        right: 2rem;
+        padding: 1rem;
+    }
+
+}
+
+
+@media screen and (min-width:1728px) {
+   
+    .link__menu {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+        font-family: var(--fonte-principal);
+        gap: 0.6rem;
+        padding: 1rem;
+    }
+
+    .texto__menu-lateral {
+        display: block;
+    }
+
+    .conteiner__titulo {
+            position: relative;
+        }
+
+    .menu_tablet {
+        position: absolute;
+        left: 18rem;
+
+    }
+    
+}
+
